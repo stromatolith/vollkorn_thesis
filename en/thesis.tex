@@ -30,4 +30,63 @@ Rubbing our nose further across the text we might discover other interesting det
 
 For example, for example .... e. g. this abbreviation reveals a first problem: TeX is tricked into adding the larger space behind the period. What can we do about that? It is also not nice if a line break happens to separate abbreviation initials. Readability will surely suffer. Let's get back to these things later.
 
+\section{Sections and subsections}
+
+The above title is a section title.
+
+\subsection{Sections and subsections}
+
+The above title is a subsection title.
+
+\subsubsection{Sections and subsections}
+
+The above title is a sub-sub-section title.
+
+\section{Bullet points and other listings}
+
+Here is a first quick list of useful resources and tools:
+\begin{itemize}
+\item the website ctan.org, where you can quickly learn what different packages are for
+\item "The Not So Short Introduction To LaTeX 2e" by Tobias Oetiker, Hubert Partl, Irene Hyna, Elisabeth Schlegl (search for lshort.pdf)
+\item Kile -- a nice LaTeX editor for Linux
+\item MiKTeX -- provides a nice editor and package administration for Windows
+\end{itemize}
+
+
+with dashes instead of bullet points:
+\begin{itemize}
+\item[-] virus
+\item[-] bacterium
+\end{itemize}
+
+counted:
+\begin{enumerate}
+\item virus as vector
+\item lipid membrane droplet as vector
+\end{enumerate}
+
+nested:
+\begin{itemize}
+\item viruses
+\begin{itemize}
+\item[-] Coronavirus
+\item[-] Adenovirus
+\end{itemize}
+\item bacteria
+\begin{itemize}
+\item[-] Streptococcus
+\item[-] Staphylococcus
+\end{itemize}
+\end{itemize}
+
+the word itself used as item symbol:
+\begin{itemize}
+\item[bacterium] breathes, feeds, lives
+\item[virus] no metabolism, does not live, created as assembled kit by living cells
+\end{itemize}
+
+
+
+
+
 \end{document}
