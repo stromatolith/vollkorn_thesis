@@ -12,3 +12,6 @@ P=1-\left( \frac{3}{4} \right)^n
 % \begin{equation*}
 % P=1-\left( \frac{3}{4} \right)^n
 % \end{equation*}
+
+\textbf{Zahlen mit Einheiten:} Zwei Sachen sollten verhindert werden, zum einen der Zeilenumbruch zwischen Zahl und Einheit, zum anderen die Streckung des Abstandes bei locker besetzten Zeilen. Das Paket \textbf{siunitx} kann uns hierbei helfen. Hier eines der Probleme: eine Reisestrecke durch Gebirge von 325 km Länge. Und so sieht die Alternative mit siunitx aus: die Strecke dürfte eine Länge zwischen \num{300} und \SI{350}{\kilo\meter} haben. Wie bei jedem Paket, kann man noch viel mehr Tips und Tricks entdecken, wenn man sich von ctan.org die Doku holt und überfliegt. Als Beispiele \SI[per-mode=symbol]{1.99}[\$]{\per\kilogram} und \SI[per-mode=fraction]{1,345}{\coulomb\per\mole}.
+
