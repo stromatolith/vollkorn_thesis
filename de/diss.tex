@@ -22,7 +22,15 @@ Diese LaTeX-Vorlage soll einen einfachen Ursprung haben, in der Form eines Hallo
 
 \mainmatter
 \chapter{Zunächst mal ein Bisschen Text}%\label{nur_text}
-Halli Hallo.
+Jetzt sollten erstmal ein paar Sätze Text kommen. Wir wollen sehen, wie TeX den Text setzt. Wie werden die Zeilenumbrüche verteilt? Welche Verteilung von Wortabständen entsteht? Beispielsweise müsste man jetzt schon erkennen können, dass in der englischen Version der angelsächsischen Tradition gefolgt wird, dass die Lücke hinter dem Punkt am Satzende etwas größer ist als die übrigen Wortlücken. In der deutssprachigen Tradition gibt es keine spezielle Vergrößerung der Wortlücke hinter dem Satzende.
+
+Als nächstes möchten wir sehen, wie Absätze im Text gehandhabt werden. Deshalb hier also ein durch Leerzeile im Quellcode induzierter neuer Absatz, ein ziemlich kurzer Absatz um genau zu sein.
+
+Mit interessiertem Blick kann man sich natürlich noch weiteren Details zuwenden. Gibt es jetzt schon automatische Wörtertrennung, ohne jegliches Zutun des Autors? Vielleicht und möglicherweise ist das provozierbar durch dedizierte willentliche Verwendung länglichausufernder Vielsilbenzusammensetzungskombinationswörter. Unbedingterweise, unausweichlicherweise, muss jetzt zuerstmal kompiliert werden, um das feststellen zu können. Und das geht ganz einfach per Befehlszeile \glqq pdflatex diss.tex\grqq{} in einer Linuxkonsole.
+
+Was ist eine Ligatur? Das ist wenn Buchstaben miteinander verbunden werden, beispielsweise die jeweils ersten zwei Buchstaben in \glqq fischen\grqq{} \& \glqq fliegen\grqq{}.
+
+Beispielsweise, beispielsweise ... warum nicht eine Abkürzung nehmen, z. B. diese hier? Wenn man sowas bei aktiviertem englischen Schriftsatzmodus macht, dann erkennt man ein erstes Problem: TeX behandelt dies wie ein Satzende und es entstehen viel zu lange Lücken dahinter. Auch kann es äußerst unschön sein, wenn ein Zeilenumbruch die Buchstabenkombination einer Abkürzung auseinanderreißt und die flüssige Lesbarkeit leidet. Wie bekommen wir Abhilfe bei solchen Wehwehchen? Dazu später mehr.
 
 
 \end{document}

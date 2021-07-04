@@ -22,6 +22,12 @@ This LaTeX thesis template begins simple and I am going to let it grow and get m
 
 \mainmatter
 \chapter{Let's begin with text}%\label{just_text}
-Halli Hallo.
+Now we would of course like to see and read a few lines of text set by TeX. How are the line breaks distributed? What variety of word distances will we get? For instance, it should already now become visible, that in the English version according to Anglo-Saxon tradition a wider word gap is used behind the period at the end of a sentence as compared to the surrounding word spaces. In the German typesetting tradition spaces behind full stops are left the same as the other spaces in the line.
+
+Next, we would like to see how paragraphs are handled by Tex. This here is a new and very short paragraph induced by empty lines in the source code before and after it.
+
+Rubbing our nose further across the text we might discover other interesting details, for example automatic hyphenation which TeX does for you dynamically. Word separation is easier to provoke in the German version where the language allows infinite word combinations. Ligatures are yet another interesting detail, it is the merging of letters, for example the first pairs of letters in the words "fish" \& "fly". Of course, you first have to compile a document from the source code in order to be able to see these things, but it's easy in any Linux console, just type "pdflatex thesis.tex".
+
+For example, for example .... e. g. this abbreviation reveals a first problem: TeX is tricked into adding the larger space behind the period. What can we do about that? It is also not nice if a line break happens to separate abbreviation initials. Readability will surely suffer. Let's get back to these things later.
 
 \end{document}
