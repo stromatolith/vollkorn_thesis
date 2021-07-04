@@ -15,5 +15,78 @@
 
 
 \begin{document}
-Hello world!
+
+\frontmatter
+\chapter{Abstract}%\label{abstract}
+This LaTeX thesis template begins simple and I am going to let it grow and get more complex step by step. I am sharing this template in the form of a Git repository, thus as a reader you can trace back the growth commit by commit. I want to write useful commit messages, so you can take them each time as a short description of what was added.
+
+\mainmatter
+\chapter{Let's begin with text}%\label{just_text}
+Now we would of course like to see and read a few lines of text set by TeX. How are the line breaks distributed? What variety of word distances will we get? For instance, it should already now become visible, that in the English version according to Anglo-Saxon tradition a wider word gap is used behind the period at the end of a sentence as compared to the surrounding word spaces. In the German typesetting tradition spaces behind full stops are left the same as the other spaces in the line.
+
+Next, we would like to see how paragraphs are handled by Tex. This here is a new and very short paragraph induced by empty lines in the source code before and after it.
+
+Rubbing our nose further across the text we might discover other interesting details, for example automatic hyphenation which TeX does for you dynamically. Word separation is easier to provoke in the German version where the language allows infinite word combinations. Ligatures are yet another interesting detail, it is the merging of letters, for example the first pairs of letters in the words "fish" \& "fly". Of course, you first have to compile a document from the source code in order to be able to see these things, but it's easy in any Linux console, just type "pdflatex thesis.tex".
+
+For example, for example .... e. g. this abbreviation reveals a first problem: TeX is tricked into adding the larger space behind the period. What can we do about that? It is also not nice if a line break happens to separate abbreviation initials. Readability will surely suffer. Let's get back to these things later.
+
+\section{Sections and subsections}
+
+The above title is a section title.
+
+\subsection{Sections and subsections}
+
+The above title is a subsection title.
+
+\subsubsection{Sections and subsections}
+
+The above title is a sub-sub-section title.
+
+\section{Bullet points and other listings}
+
+Here is a first quick list of useful resources and tools:
+\begin{itemize}
+\item the website ctan.org, where you can quickly learn what different packages are for
+\item "The Not So Short Introduction To LaTeX 2e" by Tobias Oetiker, Hubert Partl, Irene Hyna, Elisabeth Schlegl (search for lshort.pdf)
+\item Kile -- a nice LaTeX editor for Linux
+\item MiKTeX -- provides a nice editor and package administration for Windows
+\end{itemize}
+
+
+with dashes instead of bullet points:
+\begin{itemize}
+\item[-] virus
+\item[-] bacterium
+\end{itemize}
+
+counted:
+\begin{enumerate}
+\item virus as vector
+\item lipid membrane droplet as vector
+\end{enumerate}
+
+nested:
+\begin{itemize}
+\item viruses
+\begin{itemize}
+\item[-] Coronavirus
+\item[-] Adenovirus
+\end{itemize}
+\item bacteria
+\begin{itemize}
+\item[-] Streptococcus
+\item[-] Staphylococcus
+\end{itemize}
+\end{itemize}
+
+the word itself used as item symbol:
+\begin{itemize}
+\item[bacterium] breathes, feeds, lives
+\item[virus] no metabolism, does not live, created as assembled kit by living cells
+\end{itemize}
+
+
+
+
+
 \end{document}

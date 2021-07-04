@@ -15,6 +15,80 @@
 
 
 \begin{document}
-Hallo Welt!
+
+\frontmatter
+\chapter{Abstract}%\label{abstract}
+Diese LaTeX-Vorlage soll einen einfachen Ursprung haben, in der Form eines Hallo-Welt-Dokuments. Ich möchte die Vorlage daraufhin Schritt für Schritt wachsen und komplexer werden lassen. Da ich das ganze as Git-Repositorium ins Netz stelle, kann jede Leserin und jeder Leser die Wachstumsschritte Commit für Commit nachvollziehen. Ich will in den Commitnotizen hilfreiche kurze Beschreibungen dessen geben, was in jedem Beitrag neu hinzu kommt.
+
+\mainmatter
+\chapter{Zunächst mal ein Bisschen Text}%\label{nur_text}
+Jetzt sollten erstmal ein paar Sätze Text kommen. Wir wollen sehen, wie TeX den Text setzt. Wie werden die Zeilenumbrüche verteilt? Welche Verteilung von Wortabständen entsteht? Beispielsweise müsste man jetzt schon erkennen können, dass in der englischen Version der angelsächsischen Tradition gefolgt wird, dass die Lücke hinter dem Punkt am Satzende etwas größer ist als die übrigen Wortlücken. In der deutssprachigen Tradition gibt es keine spezielle Vergrößerung der Wortlücke hinter dem Satzende.
+
+Als nächstes möchten wir sehen, wie Absätze im Text gehandhabt werden. Deshalb hier also ein durch Leerzeile im Quellcode induzierter neuer Absatz, ein ziemlich kurzer Absatz um genau zu sein.
+
+Mit interessiertem Blick kann man sich natürlich noch weiteren Details zuwenden. Gibt es jetzt schon automatische Wörtertrennung, ohne jegliches Zutun des Autors? Vielleicht und möglicherweise ist das provozierbar durch dedizierte willentliche Verwendung länglichausufernder Vielsilbenzusammensetzungskombinationswörter. Unbedingterweise, unausweichlicherweise, muss jetzt zuerstmal kompiliert werden, um das feststellen zu können. Und das geht ganz einfach per Befehlszeile \glqq pdflatex diss.tex\grqq{} in einer Linuxkonsole.
+
+Was ist eine Ligatur? Das ist wenn Buchstaben miteinander verbunden werden, beispielsweise die jeweils ersten zwei Buchstaben in \glqq fischen\grqq{} \& \glqq fliegen\grqq{}.
+
+Beispielsweise, beispielsweise ... warum nicht eine Abkürzung nehmen, z. B. diese hier? Wenn man sowas bei aktiviertem englischen Schriftsatzmodus macht, dann erkennt man ein erstes Problem: TeX behandelt dies wie ein Satzende und es entstehen viel zu lange Lücken dahinter. Auch kann es äußerst unschön sein, wenn ein Zeilenumbruch die Buchstabenkombination einer Abkürzung auseinanderreißt und die flüssige Lesbarkeit leidet. Wie bekommen wir Abhilfe bei solchen Wehwehchen? Dazu später mehr.
+
+\section{Kapitelabschnitte und Unterabschnitte}
+
+Der obige Titel repräsentiert einen Kapitelabschnitt (section).
+
+\subsection{Kapitelabschnitte und Unterabschnitte}
+
+Der obige Titel repräsentiert einen Unterabschnitt (subsection).
+
+\subsubsection{Kapitelabschnitte und Unterabschnitte}
+
+Der obige Titel repräsentiert einen Unterunterabschnitt (subsubsection).
+
+\section{Aufzählungspunkte und andere Listenarten}
+
+Hier eine erste kleine Liste hilfreicher Resourcen und Werkzeuge:
+\begin{itemize}
+\item die Webseite ctan.org, dort kann man herausfinden, wofür die verschiedenen Pakete gut sind und was es für Pakete gibt
+\item \glqq The Not So Short Introduction To LaTeX 2e\grqq{} von Tobias Oetiker, Hubert Partl, Irene Hyna, Elisabeth Schlegl (einfach nach lshort.pdf suchen)
+\item Kile -- ein hübscher LaTeX-Editor für Linux
+\item MiKTeX -- ein hübscher LaTeX-Editor inklusive Paketverwaltung für Windows
+\end{itemize}
+
+Aufzählung mit Bindestrich:
+\begin{itemize}
+\item[-] Viren
+\item[-] Bakterien
+\end{itemize}
+
+gezählt:
+\begin{enumerate}
+\item Viren als Vektor
+\item Tröpfchen aus Lipidmembran als Vektor
+\end{enumerate}
+
+kombiniert:
+\begin{itemize}
+\item Viren
+\begin{itemize}
+\item[-] Coronaviren
+\item[-] Adenoviren
+\end{itemize}
+\item Bakterien
+\begin{itemize}
+\item[-] Streptokokken
+\item[-] Staphylokokken
+\end{itemize}
+\end{itemize}
+
+Das Wort selbst als Aufzählungssymbol:
+\begin{itemize}
+\item[Bakterium] atmet, frißt, lebt
+\item[Virus] kein Stoffwechsel, lebt selbst nicht, wird als Bausatz von lebenden Zellen zusammengesetzt
+\end{itemize}
+
+
+
+
+
 \end{document}
  
