@@ -14,3 +14,17 @@ P=1-\left( \frac{3}{4} \right)^n
 % \end{equation*}
 
 \textbf{Numbers with units:} We would like to see to things avoided, on the one hand line breaks between number and unit, on the other hand a stretching of the space in between in sparsely filled lines. The package \textbf{siunitx} can help us. Here one of the problems: a long travel distance of 325 km length. And this is how the alternative with siunitx works: The covered distance should be between \num{300} and \SI{350}{\kilo\meter} at the end. As with any other package, you can discover many more tips and tricks after fetching the docs from ctan.org and scrolling quickly through the pages. Als examples \SI[per-mode=symbol]{1.99}[\$]{\per\kilogram} and \SI[per-mode=fraction]{1,345}{\coulomb\per\mole}.
+
+\textbf{Isotopes:} Radioactive decays can also be expressed in the form of equations. Here the decay of tritium as example
+\begin{equation}
+  \isotope{T}  \quad \rightarrow \quad \isotope[3]{He}\,+\,e^{-}\,+\,\bar{\nu}_e,  \label{eq_T_decay}
+\end{equation}
+whereby, the package \textbf{isotope} is used for typesetting \isotope[3]{He}. As another example one possible variant of the neutron-induced fission of uranium-235
+\begin{equation}
+  \isotope[235][92]{U} + n \quad \rightarrow \quad \isotope[139][56]{Ba} + \isotope[95][36]{Kr} + 2n
+\end{equation}
+depicting besides the mass number also the atomic number, i.e. the number of protons in the core.
+
+%%% next we're going to need sth for chemical formulae
+%the \ce{CO2} non-neutrality of burning fossil 
+

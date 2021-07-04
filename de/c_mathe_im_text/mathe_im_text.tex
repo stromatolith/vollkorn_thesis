@@ -15,3 +15,17 @@ P=1-\left( \frac{3}{4} \right)^n
 
 \textbf{Zahlen mit Einheiten:} Zwei Sachen sollten verhindert werden, zum einen der Zeilenumbruch zwischen Zahl und Einheit, zum anderen die Streckung des Abstandes bei locker besetzten Zeilen. Das Paket \textbf{siunitx} kann uns hierbei helfen. Hier eines der Probleme: eine Reisestrecke durch Gebirge von 325 km Länge. Und so sieht die Alternative mit siunitx aus: die Strecke dürfte eine Länge zwischen \num{300} und \SI{350}{\kilo\meter} haben. Wie bei jedem Paket, kann man noch viel mehr Tips und Tricks entdecken, wenn man sich von ctan.org die Doku holt und überfliegt. Als Beispiele \SI[per-mode=symbol]{1.99}[\$]{\per\kilogram} und \SI[per-mode=fraction]{1,345}{\coulomb\per\mole}.
 
+\textbf{Isotope:} Radioaktive Zerfälle können auch in der Form von Gleichungen ausgedrückt werden. Als Beispiel der Zerfall von Tritium:
+\begin{equation}
+  \isotope{T}  \quad \rightarrow \quad \isotope[3]{He}\,+\,e^{-}\,+\,\bar{\nu}_e  \label{eq_T_decay}
+\end{equation}
+Hierbei findet das Paket \textbf{isotope} Verwendung, um \isotope[3]{He} zu setzen. Und noch ein Beispiel
+\begin{equation}
+  \isotope[235][92]{U} + n \quad \rightarrow \quad \isotope[139][56]{Ba} + \isotope[95][36]{Kr} + 2n
+\end{equation}
+welches neben der Massenzahl auch noch die Kernladungszahl (Protonenzahl) anführt.
+
+%%% als nächstes brauchen wir noch etwas für chemische Formeln
+%the \ce{CO2} non-neutrality of burning fossil 
+
+
