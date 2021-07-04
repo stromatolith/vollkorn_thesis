@@ -26,4 +26,13 @@ whereby, the package \textbf{isotope} is used for typesetting \isotope[3]{He}. A
 depicting besides the mass number also the atomic number, i.e. the number of protons in the core.
 
 \textbf{Chemical formulae:} Two most important drivers of anthropogenic climate warming are \ce{CO2} and \ce{CH4}.
+% let's use fancyvrb to explain the \ce command provided by mhchem in the text
+The Package \textbf{mhchem} provides the short command \Verb+\ce+ allowing to write simple (\Verb+\ce{H2O}+ turns into \ce{H2O}) or more complicated (\Verb|\ce{[\{(X2)3\}2]^3+}| turns into \ce{[\{(X2)3\}2]^3+}) formulae. Grabbing the example of a reaction equation from the package docs, \Verb?\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}?, we can compile again and convince ourselves that it works out just fine:
+\begin{equation}
+\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}
+\end{equation}
+
+
+
+
 
