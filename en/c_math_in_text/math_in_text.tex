@@ -1,0 +1,39 @@
+\chapter{Math in the text}%\label{math_in_text}
+
+The Mach number $M=v/c$ is the ratio between the local fluid velocity and the speed of sound and can often be taken as an indicator for the transition between different physical regimes. In the case of imploding cavitation bubbles the low-Mach regime ($\dot{R}\ll c$) means that there are no sharp pressure gradients inside or outside the bubble. But when the interface speed $\dot{R}$ approaches, or exceeds, the speed of sound in the gas or liquid phase the situation changes and gradients or even shock waves will arise.
+
+The chances of missing the best quarter of cases $n$ times in a row is the basis when calculating the probability $P$ of getting something from within the best quarter once among the $n$ trials:
+\begin{equation}
+P=1-\left( \frac{3}{4} \right)^n
+\end{equation}
+
+%%% equation* without numbering is not yet possible with the current set of imported packages
+% The same equation without numbering:
+% \begin{equation*}
+% P=1-\left( \frac{3}{4} \right)^n
+% \end{equation*}
+
+\textbf{Numbers with units:} We would like to see to things avoided, on the one hand line breaks between number and unit, on the other hand a stretching of the space in between in sparsely filled lines. The package \textbf{siunitx} can help us. Here one of the problems: a long travel distance of 325 km length. And this is how the alternative with siunitx works: The covered distance should be between \num{300} and \SI{350}{\kilo\meter} at the end. As with any other package, you can discover many more tips and tricks after fetching the docs from ctan.org and scrolling quickly through the pages. Als examples \SI[per-mode=symbol]{1.99}[\$]{\per\kilogram} and \SI[per-mode=fraction]{1,345}{\coulomb\per\mole}.
+
+\textbf{Isotopes:} Radioactive decays can also be expressed in the form of equations. Here the decay of tritium as example
+\begin{equation}
+  \isotope{T}  \quad \rightarrow \quad \isotope[3]{He}\,+\,e^{-}\,+\,\bar{\nu}_e,  \label{eq_T_decay}
+\end{equation}
+whereby, the package \textbf{isotope} is used for typesetting \isotope[3]{He}. As another example one possible variant of the neutron-induced fission of uranium-235
+\begin{equation}
+  \isotope[235][92]{U} + n \quad \rightarrow \quad \isotope[139][56]{Ba} + \isotope[95][36]{Kr} + 2n
+\end{equation}
+depicting besides the mass number also the atomic number, i.e. the number of protons in the core.
+
+\textbf{Chemical formulae:} Two most important drivers of anthropogenic climate warming are \ce{CO2} and \ce{CH4}.
+% let's use fancyvrb to explain the \ce command provided by mhchem in the text
+The Package \textbf{mhchem} provides the short command \Verb+\ce+ allowing to write simple (\Verb+\ce{H2O}+ turns into \ce{H2O}) or more complicated (\Verb|\ce{[\{(X2)3\}2]^3+}| turns into \ce{[\{(X2)3\}2]^3+}) formulae. Grabbing the example of a reaction equation from the package docs, \Verb?\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}?, we can compile again and convince ourselves that it works out just fine:
+\begin{equation}
+\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}
+\end{equation}
+
+\textbf{The letters of dsfont:} The "ds" in the name stands for "double-stroke". Real math fans know immedeately what to do and write things like $\mathds{N} \subset \mathds{Z} \subset \mathds{Q} \subset \mathds{R} \subset \mathds{C}$.
+
+
+
+

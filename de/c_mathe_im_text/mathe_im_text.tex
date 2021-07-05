@@ -1,0 +1,38 @@
+\chapter{Mathe im Text}%\label{mathe_im_text}
+
+Die Machzahl $M=v/c$ ist das Verhältnis zwischen lokaler Stömungsgeschwindigkeit und Schallgeschwindigkeit. Oft lässt sie sich als Indikator zur Unterscheidung physikalischer Regime heranziehen. Im Fall der implodierenden Kavitationsblase kann man im Bereich niedriger Machzahlen ($\dot{R}\ll c$) davon ausgehen, dass keine steilen Druck- oder Dichtegradienten innerhalb oder außerhalb der Blase vorkommen. Aber wenn sich die Geschwindigkeit der Blasenwand $\dot{R}$ der Schallgeschwindigkeit nähert oder sie überschreitet (eigentlich sind es innen und außen zwei verschiedene Schallgeschwindigkeiten), dann stellt sich die Situation ganz anders dar, dann entstehen steile Gradienten oder gar Schockwellen.
+
+Die Wahrscheinlichkeit, das beste Viertel $n$ mal hintereinander zu verpassen, ist die Grundlage zur Berechnung der Wahrscheinlichkeit $P$, innerhalb der $n$ Versuche wenigstens einmal das beste Viertel zu erwischen:
+\begin{equation}
+P=1-\left( \frac{3}{4} \right)^n
+\end{equation}
+
+%%% equation* mit Sternchen ohne Nummerierung ist mit den bisher importierten Paketen noch nicht möglich
+% Die gleiche Gleichung ohne Nummerierung:
+% \begin{equation*}
+% P=1-\left( \frac{3}{4} \right)^n
+% \end{equation*}
+
+\textbf{Zahlen mit Einheiten:} Zwei Sachen sollten verhindert werden, zum einen der Zeilenumbruch zwischen Zahl und Einheit, zum anderen die Streckung des Abstandes bei locker besetzten Zeilen. Das Paket \textbf{siunitx} kann uns hierbei helfen. Hier eines der Probleme: eine Reisestrecke durch Gebirge von 325 km Länge. Und so sieht die Alternative mit siunitx aus: die Strecke dürfte eine Länge zwischen \num{300} und \SI{350}{\kilo\meter} haben. Wie bei jedem Paket, kann man noch viel mehr Tips und Tricks entdecken, wenn man sich von ctan.org die Doku holt und überfliegt. Als Beispiele \SI[per-mode=symbol]{1.99}[\$]{\per\kilogram} und \SI[per-mode=fraction]{1,345}{\coulomb\per\mole}.
+
+\textbf{Isotope:} Radioaktive Zerfälle können auch in der Form von Gleichungen ausgedrückt werden. Als Beispiel der Zerfall von Tritium:
+\begin{equation}
+  \isotope{T}  \quad \rightarrow \quad \isotope[3]{He}\,+\,e^{-}\,+\,\bar{\nu}_e  \label{eq_T_decay}
+\end{equation}
+Hierbei findet das Paket \textbf{isotope} Verwendung, um \isotope[3]{He} zu setzen. Und noch ein Beispiel
+\begin{equation}
+  \isotope[235][92]{U} + n \quad \rightarrow \quad \isotope[139][56]{Ba} + \isotope[95][36]{Kr} + 2n
+\end{equation}
+welches neben der Massenzahl auch noch die Kernladungszahl (Protonenzahl) anführt.
+
+\textbf{Chemische Formeln:} Bei der anthropogenen Klimaerwärmung spielen \ce{CO2} und \ce{CH4} zentrale Rollen.
+% jetzt wird fancyvrb eingesetzt, um das Kommando \ce im Text erklären zu können
+Das Paket \textbf{mhchem} stellt uns das kurze Kommando \Verb+\ce+ zur Verfügung, um einfache (\Verb+\ce{H2O}+ wird zu \ce{H2O}) wie kompliziertere (\Verb|\ce{[\{(X2)3\}2]^3+}| wird zu \ce{[\{(X2)3\}2]^3+}) Formeln ausschreiben zu können. Wenn man das Beispiel einer Reaktionsgleichung aus der Doku herausgreift, \Verb?\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}?, dann funktioniert das auch:
+\begin{equation}
+\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}
+\end{equation}
+
+\textbf{Die Buchstaben von dsfont:} Das \glqq ds\grqq{} im Namen steht für \glqq double-stroke\grqq{} bzw. \glqq Doppelstrich\grqq{}. Mathefans müssen mit den Doppelstrichbuchstaben sofort solche ne Sachen schreiben wie $\mathds{N} \subset \mathds{Z} \subset \mathds{Q} \subset \mathds{R} \subset \mathds{C}$.
+
+
+
