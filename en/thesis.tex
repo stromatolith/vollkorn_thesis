@@ -1,33 +1,47 @@
 \documentclass[11pt,a4paper,twoside,titlepage]{book}
 %\documentclass[11pt,a4paper,twoside,titlepage,draft]{book}
 
+
+%-------  maths -- a set of usual suspects
+% AMS packages need to be loaded before fontenc, see lshort.pdf v5.01, footnote on page 33
+% AMS, that's the American Mathematical Society
+\usepackage{amsmath}		% maths stuff, e.g. multi-liner equations aligned or not
+\usepackage{amsfonts}		% fonts from the American Mathematical Society
+\usepackage{amssymb}		% symbols from the American Mathematical Society
+\usepackage{dsfont}			% double-stroke e.g. \mathds{R} for a decent symbol for real numbers
+%\usepackage{wasysym}		% double closed integrals with \oiint (but very upright and not looking as nice as AMS integrals)
+%\usepackage{esint}			% double closed integrals with \oiint or \varoiint, and of better shape than wasysym
+
+% I could observe that even before ever having explicitly demanded \usepackage{amsmath}
+% it was already pulled in by the compiler
+ 
+% context note: I'm compiling on a Linux system (Kubuntu 18.04),
+% and at this point simply in a bash console with the command: pdflatex thesis.tex
+
+%-------  input encoding
+% I'm working on Linux, maybe slight adjustments have to be made here for Windows
 \usepackage[utf8]{inputenc}
 \usepackage[OT2, T1]{fontenc}
-\usepackage{lmodern}
 
+%-------  font choice
 % the package lmodern brings in the Latin Modern family of fonts
 % here some related links I noted down a long time ago
 % https://tex.stackexchange.com/questions/1390/latin-modern-vs-cm-super
 % https://tug.org/FontCatalogue/latinmodernroman/
 % https://www.ctan.org/tex-archive/fonts/lm/
+\usepackage{lmodern}
  
+%-------  document languages
 \usepackage[german,main=english]{babel}
+\usepackage{lgreek}			% write Greek with \begin{greek} and \end{greek}
 
+%-------  units, chemical formulae, isotopes
 \usepackage{siunitx}
 \usepackage{isotope}
 \usepackage[version=4]{mhchem} % package for chemical equation typesetting
 \usepackage{fancyvrb} % enables i.a. verbatim inside figure captions via \SaveVerb{term}|test| and \protect\UseVerb{term}
 
 
-% \usepackage{amsmath}   % I see that already at this point the compiler is pulling it up
-% even though I never explicitly called upon it with the usepackage command
-% so, the math I'm using in the document probably requires it already and seems to trigger it
-% if such things happen implicitly, it can be seen as nice convenience .... I just hope that
-% these implicit side-effects do not too much damage the intended completeness and
-% self-containedness of this repo at any given moment
- 
-% context note: I'm compiling on a Linux system (Kubuntu 18.04),
-% and at this point simply in a bash console with the command: pdflatex thesis.tex
 
 \begin{document}
 

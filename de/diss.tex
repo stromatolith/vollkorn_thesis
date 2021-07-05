@@ -1,32 +1,47 @@
 \documentclass[11pt,a4paper,twoside,titlepage]{book}
 %\documentclass[11pt,a4paper,twoside,titlepage,draft]{book}
 
+
+%-------  Mathe -- ein paar übliche Verdächtige
+% AMS steht für American Mathematical Society, von dort bekommt man umfassende Sammlungen von Symbolen
+% AMS-Pakete müssen vor fontec geladen werden laut lshort.pdf v5.01, Fußnote auf Seite 33
+\usepackage{amsmath}		% grundlegender Mathekram, z.B. bündig angeordnete Gleichungssysteme übere mehrere Zeilen
+\usepackage{amsfonts}		% Schriftsätze der American Mathematical Society
+\usepackage{amssymb}		% Symbole der American Mathematical Society
+\usepackage{dsfont}			% double-stroke z.B. bekommt man mit \mathds{R} ein ansehnliches Symbol für reelle Zahlen
+%\usepackage{wasysym}		% geschlossene Integrale per \oint, \oiint (allerdings sehr aufrecht und nicht so schön wie AMS-Integrale)
+%\usepackage{esint}			% geschlossene Integrale per \oint, \oiint, \varoiint, sehen besser aus als von wasysym
+
+% ich konnte beobachten, dass schon bevor ich das Paket amsmath je per \usepackage{amsmath}
+% angefordert habe, es schon vom Kompilierer geladen wurde
+
+% Kontextnotiz: ich kompiliere unter Linux (Kubuntu 18.04),
+% derzeit einfach noch in der Bashkonsole mit dem Befehl: pdflatex diss.tex
+
+%-------  Codierung des Quellcodes
+% ich arbeite unter Linux, vielleicht muss hier für Windows etwas angepasst werden
 \usepackage[utf8]{inputenc}
 \usepackage[OT2, T1]{fontenc}
-\usepackage{lmodern}
 
+%-------  Auswahl des Schriftsatzes
 % das Paket lmodern aktiviert den Schriftsatz Latin Modern
 % hier ein paar Links, die ich vor langer Zeit zu dem Thema notiert habe
 % https://tex.stackexchange.com/questions/1390/latin-modern-vs-cm-super
 % https://tug.org/FontCatalogue/latinmodernroman/
 % https://www.ctan.org/tex-archive/fonts/lm/
+\usepackage{lmodern}
  
+%-------  document languages
 \usepackage[english,main=german]{babel}
+\usepackage{lgreek}			% griechisch schreiben mit \begin{greek} und \end{greek}
 
+%-------  Einheiten, chemische Formeln, Isotope
 \usepackage[decimalsymbol=comma]{siunitx}
 \usepackage{isotope}
 \usepackage[version=4]{mhchem} % erleichtert das Setzen von chemischen Formeln
 \usepackage{fancyvrb} % erlaubt u.a. verbatim in Bilduntersschrift per \SaveVerb{term}|test| und \protect\UseVerb{term}
 
-% \usepackage{amsmath}   % ich beobachte, dass der Kompilierer schon jetzt dieses Paket
-% einlädt, obwohl ich es bisher nie per Kommando "usepackage" explizit verlangt habe
-% wahrscheinlich passiert das schon seit den ersten Formeln und Gleichungen
-% man kann das implizite Ladeverhalten als hübsch und komfortabel sehen .... ich hoffe nur,
-% dass dadurch der Anspruch, dass das Repo sich jederzeit als komplett, freistehend,
-% unabhängig darstellt, nicht zu sehr flöten geht
 
-% Kontextnotiz: ich kompiliere unter Linux (Kubuntu 18.04),
-% derzeit einfach noch in der Bashkonsole mit dem Befehl: pdflatex diss.tex
 
 \begin{document}
 
