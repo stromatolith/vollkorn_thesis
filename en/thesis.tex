@@ -44,6 +44,16 @@
 %-------  format and layout
 \usepackage{fancyhdr} % allows fancy page style with lines designating header and footer
 
+% With the package geometry we can influence the size of the border areas.
+% By slimming down the border region, you can put more text on a page than TeX would allow with default
+% settings. Many scientists, myself included, have the tendency to pack the pages with text and figures
+% as much as possible. But there are professionals who're actually investigating what happens in the brains
+% of readers. These professionals warn against too wide text bodies. In fact, you might have realised
+% yourself that jumping to the beginning of the next line becomes more difficult the longer the lines get.
+% Last but not least, you might have to plan for some millimetres of extra space for the bookbinder to
+% chip away.
+\usepackage[top=1.5in,bottom=1.5in,inner=1.5in,outer=1.25in,headheight=28pt]{geometry}
+
 %=======  \begin{document}  =====================================================
 \begin{document}
 
