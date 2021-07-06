@@ -41,21 +41,51 @@
 \usepackage[version=4]{mhchem} % erleichtert das Setzen von chemischen Formeln
 \usepackage{fancyvrb} % erlaubt u.a. verbatim in Bilduntersschrift per \SaveVerb{term}|test| und \protect\UseVerb{term}
 
+%-------  Format und Layout
+\usepackage{fancyhdr} % ermöglicht den fancy Stil mit Linien für Seitenkopf und -fuß
 
-
+%=======  \begin{document}  =====================================================
 \begin{document}
 
+%-------  Titelseite  -----------------------------------------------------------
 \pagenumbering{nonumbering}
 \pagestyle{empty}
 \include{b_titelseite/titelseite}
+\cleardoublepage
 
+%-------  Zusammenfassung  ------------------------------------------------------
 \frontmatter
+
+\pagestyle{fancy} % lässt Linien zur Abgrenzung von Kopf- und Fußbereich entstehen
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\chead[]{}
+\lhead[\textsc{Zusammenfassung}]{}         
+\rhead[]{\textsc{Zusammenfassung}}
+\cfoot[]{}
+\lfoot[\thepage]{}
+\rfoot[]{\thepage}
+
 \include{b_zusammenfassung/zusammenfassung}
+\cleardoublepage
+
+%-------  Inhaltsverzeichnis  ----------------------------------------------------
+\lhead[\textsc{Inhaltsverzeichnis}]{}       
+\rhead[]{\textsc{Inhaltsverzeichnis}}
 
 \tableofcontents
 \cleardoublepage
 
+%-------  Hauptteil - die Kapitel  -----------------------------------------------
 \mainmatter
+
+\chead[]{} 
+\lhead[\textsc{\leftmark}]{}  
+\rhead[]{\textsl{\rightmark}}
+\cfoot[]{}
+\lfoot[\textsc{Seite \thepage}]{\textsc{}}
+\rfoot[\textsc{}]{\textsc{Seite \thepage}}
 
 \include{c_nur_text/nur_text}
 \include{c_mathe_im_text/mathe_im_text}
