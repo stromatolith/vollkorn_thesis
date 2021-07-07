@@ -259,6 +259,10 @@ TSWLatexianTemp*
 # KBibTeX
 *~[0-9]*
 
+# Kile
+*.kile
+*.kilepr
+
 # TeXnicCenter
 *.tps
 

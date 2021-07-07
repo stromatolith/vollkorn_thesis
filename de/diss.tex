@@ -41,17 +41,59 @@
 \usepackage[version=4]{mhchem} % erleichtert das Setzen von chemischen Formeln
 \usepackage{fancyvrb} % erlaubt u.a. verbatim in Bilduntersschrift per \SaveVerb{term}|test| und \protect\UseVerb{term}
 
+%-------  Format und Layout
+\usepackage{fancyhdr} % ermöglicht den fancy Stil mit Linien für Seitenkopf und -fuß
 
+% Mit dem Paket geometry wird Einfluss auf die Größe der Randbereiche genommen.
+% Ich habe als Schwabe in mir die starke Tendenz, die Seiten vollzustopfen und Papier zu sparen.
+% Aber dennoch sollte man auch auf Profis höre, die Wahrnehmungsvorgänge beim Lesen erforschen.
+% Wenn Zeilen extrem lang werden, dann merkt man ja auch selber, dass man beim Sprung in die
+% nächste Zeile stolpern kann. Deshalb ist Nachsicht mit menschlichen Gehirnen angeraten, und
+% man denke auch an die Buchbinder, die noch was abschnibbeln müssen.
+\usepackage[top=1.5in,bottom=1.5in,inner=1.5in,outer=1.25in,headheight=28pt]{geometry}
 
+%=======  \begin{document}  =====================================================
 \begin{document}
 
+%-------  Titelseite  -----------------------------------------------------------
+\pagenumbering{nonumbering}
+\pagestyle{empty}
+\include{b_titelseite/titelseite}
+\cleardoublepage
+
+%-------  Zusammenfassung  ------------------------------------------------------
 \frontmatter
+
+\pagestyle{fancy} % lässt Linien zur Abgrenzung von Kopf- und Fußbereich entstehen
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\chead[]{}
+\lhead[\textsc{Zusammenfassung}]{}         
+\rhead[]{\textsc{Zusammenfassung}}
+\cfoot[]{}
+\lfoot[\thepage]{}
+\rfoot[]{\thepage}
+
 \include{b_zusammenfassung/zusammenfassung}
+\cleardoublepage
+
+%-------  Inhaltsverzeichnis  ----------------------------------------------------
+\lhead[\textsc{Inhaltsverzeichnis}]{}       
+\rhead[]{\textsc{Inhaltsverzeichnis}}
 
 \tableofcontents
 \cleardoublepage
 
+%-------  Hauptteil - die Kapitel  -----------------------------------------------
 \mainmatter
+
+\chead[]{} 
+\lhead[\textsc{\leftmark}]{}  
+\rhead[]{\textsl{\rightmark}}
+\cfoot[]{}
+\lfoot[\textsc{Seite \thepage}]{\textsc{}}
+\rfoot[\textsc{}]{\textsc{Seite \thepage}}
 
 \include{c_nur_text/nur_text}
 \include{c_mathe_im_text/mathe_im_text}
